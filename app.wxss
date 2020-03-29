@@ -1,0 +1,5 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+page{
+  background:#21223E;
+}

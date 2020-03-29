@@ -1,0 +1,61 @@
+<cu-custom bgColor="bg-page">
+  <view slot="content">会员卡</view>
+</cu-custom>
+<view class="bg-page">
+  <view class="bg-page indexContent" wx:if="{{PageCur=='index'}}">
+    <view class="cardList">
+      <view class="card-item {{PageCur=='index'?'animation-slide-bottom':''}}" wx:for="{{cardList}}" wx:key="index" style="animation-delay: {{(index+1)*0.8}}s;">
+          <view style="font-size:1rem;text-align:right;font-weight:bold">金额卡</view>
+          <view>所属店铺：{{item.store}}</view>
+          <view>初始金额：{{item.inital}}</view>
+          <view>剩余金额：{{item.balance}}</view>
+          <view style="margin-top:20rpx">{{item.cardId}}</view>
+      </view>
+
+      <view class="card-item empty" bindtap="showModal" data-target="DialogModal1">
+        <image src="../../image/add@2x.png" style="width:35px;height:35px;margin-bottom:20rpx"></image>
+        <view>添加金额卡</view>
+      </view>
+
+    </view>
+  </view>
+  <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+    <view class="cu-dialog bg-white" style="width:60%;min-width:300px;border-radius:20rpx">
+      <view class="cu-bar bg-white justify-end" style="height:auto;min-height:150rpx;over-flow:none">
+        <view class="content" style="color:#2D81F3;font-size:1rem;height:auto;top:40rpx">请选择
+          <view style="color:#D7D7D7;text-align:center;font-size:0.6rem;line-height:0.6rem">(所属店铺)</view>
+        </view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-purple-height" style="margin-top:-40rpx"></text>
+        </view>
+      </view>
+      <view style="text-align:center;width:85%;margin:0 auto;border-top:1px solid #E7E7E7">
+      <view class="grid col-3 padding-sm">
+          <view wx:for="{{checkbox}}" class="padding-xs" wx:key="index">
+            <button style="padding:0 10rpx" class="cu-btn blue md block {{item.checked?'bg-blue':'line-blue'}}" bindtap="ChooseCheckbox" data-value="{{item.value}}"> {{item.name}} </button>
+          </view>
+        </view>
+      </view>
+      <view class="cu-bar bg-white justify-center">
+        <view class="action">
+          <button class="cu-btn round md bg-blue" bindtap="hideModal">确认开卡</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{PageCur=='scan'}}">
+    {{scanRes}}
+  </view>
+  <profile wx:if="{{PageCur=='profile'}}"></profile>
+</view>
+<view class="cu-bar tabbar bg-tabbar foot">
+    <view class="action  {{PageCur=='index'?'text-white':'text-tabbar-item'}}" bindtap="NavChange" data-cur="index">
+      <view class="cuIcon-card {{PageCur=='index'?'text-white':'text-tabbar-item'}}" ></view> 首页
+    </view>
+    <view class="action add-action {{PageCur=='scan'?'text-white':'text-tabbar-item'}}" bindtap="" data-cur="scan">
+      <button class="cu-btn cuIcon-scan {{PageCur=='scan'?'bg-white':'bg-tabbar-item'}} shadow" bindtap="scanCode"></button>扫一扫
+    </view>
+    <view class="action {{PageCur=='profile'?'text-white':'text-tabbar-item'}}" bindtap="NavChange" data-cur="profile">
+      <view class="cuIcon-my {{PageCur=='profile'?'text-white':'text-tabbar-item'}}"></view>我的
+    </view>
+  </view>

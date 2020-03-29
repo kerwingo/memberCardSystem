@@ -1,0 +1,25 @@
+.indexContent{
+  width:100%;
+  height:100vh;
+  padding: 20rpx 30rpx;
+}
+.card-item {
+  width: 100%;
+  min-height: 160px;
+  padding:20rpx 45rpx;
+  border-radius: 20rpx;
+  margin: 20rpx 0 30rpx 0;
+  background-image: linear-gradient(30deg,#BB8FFE 0%,#531EF2 100%);
+}
+.card-item.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  background:inherit;
+  border: 1px dashed #595B94;
+  color:#595B94 ;
+}
+.card-item  view{
+  margin-bottom: 15rpx;
+}
