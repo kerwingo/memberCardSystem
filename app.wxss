@@ -3,3 +3,6 @@
 page{
   background:#21223E;
 }
+.page-pd{
+  padding: 0 40rpx;
+}

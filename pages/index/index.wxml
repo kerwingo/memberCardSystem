@@ -46,7 +46,7 @@
   <view wx:if="{{PageCur=='scan'}}">
     {{scanRes}}
   </view>
-  <profile wx:if="{{PageCur=='profile'}}"></profile>
+  <profile id="profile" wx:if="{{PageCur=='profile'}}"></profile>
 </view>
 <view class="cu-bar tabbar bg-tabbar foot">
     <view class="action  {{PageCur=='index'?'text-white':'text-tabbar-item'}}" bindtap="NavChange" data-cur="index">

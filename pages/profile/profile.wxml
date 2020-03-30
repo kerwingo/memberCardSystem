@@ -1,4 +1,11 @@
-<view>
-  <view>profile</view>  
+<view class="padding-xl bg-page radius shadow shadow-lg">
+  <view class="flex justify-center">
+    <block>
+      <view class='text-center'>
+        <view class="cu-avatar xl round solids margin-left" style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">{{userInfo.nickName}}</view>
+      </view>
+    </block>
+  </view>
 </view>
   
