@@ -1,0 +1,9 @@
+.nav{
+  border-top: 1px solid #32344C ;
+  border-bottom: 1px solid #32344C;
+  background:inherit;
+  margin-top: 20rpx;
+}
+.cuIcon-back:before{
+  color:#fff
+}

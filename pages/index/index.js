@@ -6,6 +6,7 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
+    pageName:'会员卡',
     PageCur: 'index',
     cardList:[
       {store:'金牛万达',inital:100,balance:50,cardId:625785445247851525},
@@ -39,7 +40,18 @@ Page({
       PageCur: e.currentTarget.dataset.cur
     })
     if(e.currentTarget.dataset.cur =='profile'){
+      this.setData({
+        pageName: '我的'
+      })
       this.selectComponent("#profile").getUserInfo()
+    }else if (e.currentTarget.dataset.cur =='index'){
+      this.setData({
+        pageName: '会员卡'
+      })
+    }else{
+      this.setData({
+        pageName: '会员卡'
+      })
     }
   },
   //打开弹窗

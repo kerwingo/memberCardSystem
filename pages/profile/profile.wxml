@@ -1,11 +1,29 @@
-<view class="padding-xl bg-page radius shadow shadow-lg">
-  <view class="flex justify-center">
-    <block>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids margin-left" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
+<view class="padding-xl radius shadow shadow-lg" style="position:relative;height:100vh">
+  <view style="height:90vh;width:100%;position:absolute;bottom:0;left:0;background:#E6E6E6"></view>
+  <view style="position:relative;z-index:1">
+    <view class="flex justify-center align-center">
+        <view class='text-center'>
+          <view class="cu-avatar super round" style="background-image:url({{userInfo.avatarUrl}})"></view>
+          <view class="name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="content-box">
+      <view class="cu-list menu margin-top-xl margin-bottom-xl shadow-lg" style="border-radius:10px">
+          <view class="cu-item arrow" bindtap="navigateTo">
+            <view class="content">
+              <image src="../../image/chongzhi_card@2x.png" style="width:20px;height:40rpx;margin-right:20rpx"></image>
+              <text style="color:#2D2E48">充值</text>
+            </view>
+          </view>
+          <view class="cu-item arrow">
+            <view class="content">
+              <image src="../../image/xiaofei_card@2x.png" style="width:40rpx;height:40rpx;margin-right:20rpx"></image>
+              <text style="color:#2D2E48">消费记录</text>
+            </view>
+          </view>
+      </view>  
+    </view>
   </view>
+  
 </view>
   

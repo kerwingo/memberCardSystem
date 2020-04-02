@@ -1,1 +1,32 @@
 @import "../../colorui/main.wxss";
+.text-center{
+  background:#fff;
+  box-shadow: 0 0 10rpx 2rpx rgba(0,0,0,0.1);
+  border-radius: 20rpx;
+  width: 100%;
+  padding: 20rpx 0;
+
+}
+.name {
+  color:#333;
+  font-size:32rpx;
+  font-weight: bold;
+  margin-top: 32rpx;
+}
+
+.cu-list{
+  padding: 0 40rpx;
+  background:#fff;
+  overflow: hidden;
+  box-shadow: 0 0 10rpx 2rpx rgba(0,0,0,0.1);
+}
+.cu-list .cu-item{
+  padding: 30rpx 0 !important;
+  border-bottom: 2rpx solid #E6E6E6;
+}
+.cu-list .cu-item:last-child{
+  border-bottom: none;
+}
+.cu-list.menu>.cu-item.arrow:before {
+  color:#E6E6E6
+}

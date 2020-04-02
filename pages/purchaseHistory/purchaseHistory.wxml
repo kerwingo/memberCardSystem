@@ -1,8 +1,12 @@
 <cu-custom isBack="{{true}}">
-  <view slot="backText">返回</view>
-  <view slot="content">微动画</view>
+  <view slot="backText" class="text-white">返回</view>
+  <view slot="content" class="text-white">消费记录</view>
 </cu-custom>
 <view>
-  <view>消费记录</view>  
+  <scroll-view scroll-x class="bg-white nav text-center">
+    <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{3}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      Tab{{index}}
+    </view>
+  </scroll-view>
 </view>
   

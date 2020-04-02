@@ -14,6 +14,11 @@ Page({
       hasUserInfo: true
     })
   },
+  navigateTo(){
+    wx.navigateTo({
+      url: '/pages/purchaseHistory/purchaseHistory',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

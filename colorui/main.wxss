@@ -972,6 +972,11 @@ button.icon.lg {
 	height: 128rpx;
 	font-size: 2.5em;
 }
+.cu-avatar.super {
+	width: 160rpx;
+	height: 160rpx;
+	font-size: 2.5em;
+}
 
 .cu-avatar .avatar-text {
 	font-size: 0.4em;

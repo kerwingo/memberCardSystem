@@ -1,5 +1,5 @@
 <cu-custom bgColor="bg-page">
-  <view slot="content">会员卡</view>
+  <view slot="content">{{pageName}}</view>
 </cu-custom>
 <view class="bg-page">
   <view class="bg-page indexContent" wx:if="{{PageCur=='index'}}">
